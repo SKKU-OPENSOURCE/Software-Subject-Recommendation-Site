@@ -30,18 +30,7 @@ button {
 }
 
 #changeOrder_img  {
-  margin-left:130px;
   width:50px;
-}
-
-#save_btn {
-  height: 50px;
-  width:80px;
-  margin-right:50px;
-  background-color: var(--main-color);
-  color:white;
-  border:none;
-  float:right;
 }
 
 #cellTitle{
