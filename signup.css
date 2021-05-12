@@ -1,0 +1,22 @@
+#center {
+  width:50%;
+  height:50%;
+  margin-left:25%;
+  margin-top:150px;
+  text-align: center;
+  border:1px solid;
+
+
+}
+#inputForm{
+  margin:20%;
+  display: inline-block;
+}
+
+input {
+  margin-top:15px;
+}
+
+button {
+  margin-top:15px;
+}
