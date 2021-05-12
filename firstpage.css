@@ -1,0 +1,26 @@
+#top {
+  text-align: center;
+  margin:5%;
+}
+
+#left {
+  float: left;
+  width:50%;
+  height: 250px;
+  text-align:center;
+}
+
+#right {
+  float:right;
+  width:50%;
+  text-align: center;
+}
+
+#noLogin_div{
+  margin-left: 25%;
+  float:center;
+  border:1px solid;
+  width:50%;
+  height: 250px;
+  text-align: center;
+}
