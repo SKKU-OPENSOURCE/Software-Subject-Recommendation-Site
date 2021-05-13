@@ -1,6 +1,7 @@
 :root {
   --main-color: #4472C2;
   --main-textcolor: rgb(255,255,255);
+  --hover-maincolor: #375D9F;
 }
 
 input {
@@ -16,6 +17,11 @@ button {
   border:0;
   background-color: var(--main-color);
   color:white;
+  cursor:pointer;
+}
+
+button:hover {
+  background-color: var(--hover-maincolor);
 }
 
 #center {
@@ -29,6 +35,6 @@ button {
 
 }
 #inputForm{
-  margin:20%;
+  margin:10%;
   display: inline-block;
 }

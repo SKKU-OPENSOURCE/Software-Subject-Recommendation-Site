@@ -12,6 +12,7 @@ div{
 
 button {
   font-size:1em;
+  cursor:pointer;
 }
 
 #top {
@@ -44,6 +45,16 @@ button {
   float:right;
 }
 
+#loding_btn {
+  height: 50px;
+  width:80px;
+  margin-right:50px;
+  background-color: var(--main-color);
+  color:white;
+  border:none;
+  float:right;
+}
+
 #cellTitle{
   height: 40px;
   width:70%;
@@ -63,6 +74,7 @@ button {
   border-right: 1px solid  var(--main-color);
   border-bottom: 1px solid  var(--main-color);
 }
+
 
 #subject_div {
   height: 35px;

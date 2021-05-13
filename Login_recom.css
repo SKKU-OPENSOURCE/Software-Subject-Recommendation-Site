@@ -1,5 +1,7 @@
 :root {
   --main-color: #4472C2;
+  --white-hover: #E0E3EE;
+  --hover-maincolor: #375D9F;
 }
 
 body {
@@ -12,7 +14,10 @@ div{
 
 button {
   font-size:1em;
+  cursor:pointer;
 }
+
+
 
 #top {
   margin-top:15px;
@@ -30,7 +35,7 @@ button {
 }
 
 #changeOrder_img  {
-  margin-left:130px;
+  margin-left:250px;
   width:50px;
 }
 
@@ -42,6 +47,24 @@ button {
   color:white;
   border:none;
   float:right;
+}
+
+#loading_btn {
+  height: 50px;
+  width:80px;
+  margin-right:50px;
+  background-color: var(--main-color);
+  color:white;
+  border:none;
+  float:right;
+}
+
+#save_btn:hover{
+  background-color: var(--hover-maincolor);
+}
+
+#loading_btn:hover{
+    background-color: var(--hover-maincolor);
 }
 
 #cellTitle{
@@ -85,4 +108,8 @@ button {
   background-color: white;
   border:none;
 
+}
+
+#selectPreceded_btn:hover {
+  background-color: var(--white-hover);
 }

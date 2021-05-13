@@ -1,5 +1,6 @@
 :root {
   --main-color: #4472C2;
+  --white-hover: #E0E3EE;
 }
 
 body {
@@ -12,6 +13,7 @@ div{
 
 button {
   font-size:1em;
+  cursor:pointer;
 }
 
 #top {
@@ -73,5 +75,10 @@ button {
   padding:0px;
   background-color: white;
   border:none;
+
+}
+
+#selectPreceded_btn:hover {
+  background-color:var(--white-hover);
 
 }
