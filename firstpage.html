@@ -1,0 +1,77 @@
+<html>
+
+  <head>
+    <title>Software-Subject-Recommendation-Site</title>
+    <link rel="stylesheet" href="./css/firstpage.css">
+  </head>
+
+
+  <body>
+
+    <div id="top">
+      <h1> Software-Subject-Recommendation-Site </h1>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div id="left">
+      <a id="noLogin_a" href="noLogin_recom_next.html">
+        <div id="noLogin_div">Get Recommendation</div>
+      </a>
+    </div>
+
+    <div id="right">
+      <input id="id_input" type="text" placeholder="ID"/><br/>
+      <input id="pw_input" type="password" placeholder="PW"/><br/>
+      <button id="signIn_btn">Sign in</button>
+      <button id="signUp_btn" onclick="location.href='signup.html' ">Sign up</button>
+    </div>
+
+
+    <script>
+      /* 가져온거라 확인 필요
+      function processFile(file) {
+        var reader = new FileReader();
+        reader.onload = function () {
+          output.innerText = reader.result;
+        };
+        reader.readAsText(file, "euc-kr");
+      }
+      */
+
+
+      let signIn = document.querySelector("#signIn_btn");
+      signIn.addEventListener("click", () => {
+        //get ID,PW
+        let ID_Input = document.querySelector("#id_input");
+        let ID = ID_Input.value;
+        let PW_Input = document.querySelector("#pw_input");
+        let PW = PW_Input.value;
+
+        //userdata.txt에서 유저가 등록되어 있는지 확인(틀리면 0, 맞으면 1)
+        let ID_check
+        let PW_check
+
+        //user_check=1 : 다음페이지로 이동/ user_check=0 : 알람 + textbox reset
+        if(PW_check === 1)
+          location.href="Login_recom_next.html";
+        else if (ID_check === 0)
+        {
+          alert('We cannot find an account with that ID');
+          ID_Input.value = "";
+          PW_Input.value = "";
+        }
+        else
+        {
+          alert('Your password does not match with your ID');
+          PW_Input.value = "";
+        }
+        
+        
+      })
+
+    </script>
+  </body>
+
+</html>
