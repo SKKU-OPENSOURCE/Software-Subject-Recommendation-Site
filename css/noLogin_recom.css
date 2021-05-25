@@ -53,6 +53,7 @@ button {
   border-left: 1px solid  var(--main-color);
   border-right: 1px solid  var(--main-color);
   border-bottom: 1px solid  var(--main-color);
+  overflow : auto;
 }
 
 #subject_div {

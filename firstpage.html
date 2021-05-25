@@ -31,7 +31,7 @@
     </div>
 
 
-    <script>
+    <script language = "JavaScript">
       
 
 
@@ -44,12 +44,14 @@
         let PW = PW_Input.value;
 
         //userdata.txt에서 유저가 등록되어 있는지 확인(틀리면 0, 맞으면 1)
+        test();
         let ID_check
-        if(updatingtxt1("User/userdata.txt") === "1")
+        temp=updatingtxt1("User/userdata.txt");
+        if(temp === "1")
           ID_check = 1;
           console.log(ID_check);
         let PW_check
-
+        if(temp === "1"){PW_check=1}
         //user_check=1 : 다음페이지로 이동/ user_check=0 : 알람 + textbox reset
         if(PW_check === 1)
           location.href="Login_recom_next.html";
@@ -64,6 +66,7 @@
           alert('Your password does not match with your ID');
           PW_Input.value = "";
         }
+
         
         
       })

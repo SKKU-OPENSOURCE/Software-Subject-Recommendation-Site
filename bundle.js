@@ -4,6 +4,12 @@
 /* 인접리스트 directed graph 구현 */
 //import * as p5 from './p5.js';
 
+var namelist=["오픈소스소프트웨어실습","컴퓨터개론","공학컴퓨터프로그래밍","자료구조개론","문제해결","시스템프로그램","오픈소스SW실습","JAVA프로그래밍실습","알고리즘개론","컴퓨터구조개론","시스템프로그래밍실습"
+,"소프트웨어세미나","컴퓨터공학세미나","프로그래밍실습","소프트웨어공학개론","인공지능개론","컴퓨터네트웍개론","정보보호개론","웹프로그래밍실습","소프트웨어특강1","컴퓨그래픽스개론","기계학습원론",
+,"임베디드소프트웨어개론","빅데이터분석방법론","HCI개론","심층신경망개론","네트워크프로젝트","인공지능프로젝트","가상현실론","네트워크인공지능","소프트웨어구조설개론","컴파일러와언어개론",
+"블록체인과스마트컨트랙트","소프트웨어특강2","시스템시뮬레이션개론","컴퓨터비전개론","멀티코어컴퓨팅","AI캡스톤디자인","인터넷서비스와정보보호","캡스톤설계프로젝트","임베디드시스템프로젝트",
+"데이터베이스프로젝트","고급컴퓨터네트워크설계","분산컴퓨팅원론","정보시각화","인공지능보안","시스템보안특론"]
+
 var fs = require('fs');
 
 let adjacencyList=[];
@@ -86,8 +92,8 @@ reversegraph.addedge2(31,19);
 reversegraph.addedge2(33,19);
 reversegraph.addedge2(30,20);
 reversegraph.addedge2(48,20);
-//console.log((reverseList));
 
+//console.log((reverseList));
 //console.log("reversegraph : ");
 
 
@@ -120,7 +126,7 @@ function updatingtxt1(txtid){
     //console.log("변경 된 txt 스트링 내용 : "+txt);
     // showRec1() //갱신된 정보를 바탕으로 웹 페이지 목록 갱신
 }
-window.updatingtxt1 = function(){}
+
 
 function weighttorf(sugang,num){
   if(num<11){
@@ -151,11 +157,10 @@ function updatingtxt2(txtid) {
     //console.log("변경 된 txt2 스트링 내용 : "+txt2);
     //showRec2()
 }
-window.updatingtxt2 = function(){}
+
 function recur(tt,indexnum){//tt는 txt 스트링, indextnum은 기준점이 될 인덱스 번호
   //console.log(tt+" "+indexnum);
   if(reverseList[indexnum].length===0 || tt[indexnum]==='2'){//선행 과목이 없는 경우 변경 점 없이 리턴 + 단순히 수강한 과목이라면 변경할 내용이 없으므로 그대로 리턴
-    //console.log("ending recur function");
     return tt;
   }
   else{//선행 과목 변경
@@ -176,6 +181,25 @@ function changestring(strr,indexnum,changenum){//txt는 txt 스트링, indextnum
   strr=strrsub1+changechar+strrsub2;
   return strr;
 }
+
+function isit1(i){
+  console.log(1);
+  let txt=fs.readFileSync("/userinfo/Nologin.txt", "utf8");
+  if(txt[i]==="1"){return 1;
+  }else{ return 0;}
+}
+
+function getname(i){
+  //console.log(namelist[i]);
+  return namelist[i];
+}
+
+window.test =function(){}
+window.updatingtxt1 = function(){}
+window.updatingtxt2 = function(){}
+window.isit1 = function(){}
+window.getname = function(){}
+
 
 /*
 function showRec1(){
