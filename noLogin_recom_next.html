@@ -1,0 +1,80 @@
+<html>
+
+  <head>
+    <title>Software-Subject-Recommendation-Site</title>
+    <link rel="stylesheet" href="./css/noLogin_recom.css">
+    
+  </head>
+
+
+  <body>
+
+    <div id="top">
+      <a id="changeOrder" href="noLogin_recom_pre.html">
+        <img id="changeOrder_img" src="./img/change_order.png"/>
+      </a>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div id="left">
+      <div id="cellTitle">
+        Preceded
+      </div>
+
+      <div id="cellContents">
+        <div id="subject_btn_div">
+          <button id="selectPreceded_btn" onclick="selectSubject()">오픈소스소프트웨어실습</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="right">
+      <div id="cellTitle">
+        Recommendation
+      </div>
+
+      <div id="cellContents">
+        <div id="subject_div">오픈소스소프트웨어실습</div>
+      </div>
+    </div>
+
+
+    <script>
+      //NoLogin의 모든 정보 0으로
+
+      //button 색 가져오기
+      let oss = document.querySelector("#selectPreceded_btn");
+     
+    function getColor(num){
+      if(num === 0 || num === 1)              //미수강 상태인 경우 흰색
+      oss.style.background = 'white';
+      else if(num === 2)                      //수강 상태인 경우 회색
+      oss.style.background = 'gray';
+    }
+      let subject_state = 0;
+
+    function selectSubject() {
+      //숫자코드 변화
+      if(subject_state === 0 || subject_state === 1)              //미수강 상태인 경우 클릭하면 수강으로
+      subject_state = 2;
+      else if(subject_state=== 2)
+      subject_state = 0;
+
+      //nologin 텍스트 파일 변화
+
+
+      //색 변경
+      getColor(subject_state);
+
+    }
+
+    function Recommend(){
+
+    }
+
+    </script>
+  </body>
+
+</html>
