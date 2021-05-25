@@ -1,5 +1,6 @@
 /* 인접리스트 directed graph 구현 */
 //import * as p5 from './p5.js';
+
 var fs = require('fs');
 
 let adjacencyList=[];
@@ -88,8 +89,6 @@ reversegraph.addedge2(48,20);
 
 
 //test case
-updatingtxt1("alpha.txt");
-updatingtxt2("beta.txt");
 //let txt;
 //갱신된 텍스트 파일로부터 추천 과목 갱신
 function updatingtxt1(txtid){
@@ -99,7 +98,7 @@ function updatingtxt1(txtid){
     for(let i = 0;i<txt.length;i++){
       if(txt[i]==='2'){ count+=1;}
     }
-    console.log("변경 전 txt 스트링 내용 : "+txt);
+    //console.log("변경 전 txt 스트링 내용 : "+txt);
     //만약 과목 i가 수강되었을 때, 만약 비수강으로 되어있다면 수강 과목수를 고려하여 추천으로 변경한다.
     for(let i = 0;i<txt.length;i++){
       if(txt[i]==='2'){
@@ -107,16 +106,18 @@ function updatingtxt1(txtid){
           if(txt[adjacencyList[i][j]]==='0'){
             if(weighttorf(count,j)){
               //txt[j]를 1로 변경!
-              console.log(adjacencyList[i][j]+"번 과목을 추천 과목으로 변경!(0 -> 1)");
+              //console.log(adjacencyList[i][j]+"번 과목을 추천 과목으로 변경!(0 -> 1)");
               txt=changestring(txt,adjacencyList[i][j],1);
             }
           }
         }
       }
     }
-    console.log("변경 된 txt 스트링 내용 : "+txt);
+    return txt;
+    //console.log("변경 된 txt 스트링 내용 : "+txt);
     // showRec1() //갱신된 정보를 바탕으로 웹 페이지 목록 갱신
 }
+
 
 function weighttorf(sugang,num){
   if(num<11){
@@ -124,7 +125,7 @@ function weighttorf(sugang,num){
   }else if(10<num<18){
     if(sugang>7){
       return true;
-    }
+    }no
   }else if(17<num<23){
     if(sugang>11){
       return true;
@@ -141,11 +142,10 @@ function weighttorf(sugang,num){
 function updatingtxt2(txtid) {
     let txt2=fs.readFileSync(txtid, "utf8");
     //let txt2= "22220222222222222222222222222222222222220000000000"
-    console.log("변경 전 txt2 스트링 내용 : "+txt2);
     for(let i = 0;i<51;i++){
       txt2=recur(txt2,i)
     }
-    console.log("변경 된 txt2 스트링 내용 : "+txt2);
+    //console.log("변경 된 txt2 스트링 내용 : "+txt2);
     //showRec2()
 }
 
