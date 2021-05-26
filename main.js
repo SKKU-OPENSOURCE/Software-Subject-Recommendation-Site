@@ -99,13 +99,14 @@ class User {
   constructor(ID,PW,phone,name){
     this.ID = ID;
     this.PW = PW;
-    this.sub1="000000000000000000000000000000000000000000000000000";
+    this. sub1 ="000000000000000000000000000000000000000000000000000";
     this.sub2="222222222222222222222222222222222222222222222222222";
     this.phone=phone;
     this.name=name;
   }
 };
 let Users = [];
+
 
 function findID(ID){
   for(let i = 0; i<Users.length; i++){
